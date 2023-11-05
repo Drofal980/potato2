@@ -208,3 +208,8 @@ nav a:hover {
     border-right: 1px solid;
 }
 
+img.content-img {
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
