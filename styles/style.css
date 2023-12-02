@@ -54,7 +54,7 @@ header {
     grid-template-rows: 75px;
     justify-content: space-around;
     align-items: center;
-    margin: 10 auto;
+    text-align: center;
     border: none;
     padding: 10px;
     max-height: 80px;
@@ -68,7 +68,6 @@ header {
 
 /* Links inside the navbar */
 .navbar.logo {
-    float: left;
     font-size: var(--nav-button-font-size);
     font-family: inherit;
     color: var(--nav-link-color);
