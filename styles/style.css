@@ -205,7 +205,9 @@ input[type=password] {
 
 /* Set a style for all buttons */
 .modal button {
-    background-color: #04AA6D;
+    background-color: var(--primary-color);
+    font-family: var(--heading-font);
+    font-weight: bold;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
