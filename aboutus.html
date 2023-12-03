@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2tato | Flavors</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropdown-button">Menu</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="flavors.html">Flavors</a>
+                    <a href="faqs.html">FAQs</a>
+                </div>
+            </div>
+            <a href="index.html">
+                <img class="logo" src="images/potato_2_logo_full.svg" alt="logo">
+            </a>
+            <button class="navbar-button" onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+            <div id="id01" class="modal">
+
+                <form class="modal-content animate">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                            title="Close Modal">&times;</span>
+                    </div>
+
+                    <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input id="unameLogin" type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input id="pswLogin" type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button type="submit">Login</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                    <div class="container">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+            <button class="navbar-button" onclick="document.getElementById('id02').style.display='block'">Sign
+                Up</button>
+
+            <div id="id02" class="modal">
+
+                <form class="modal-content animate">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                            title="Close Modal">&times;</span>
+                    </div>
+
+                    <div class="container">
+                        <label for="fname"><b>First Name</b></label>
+                        <input id="fname" type="text" placeholder="Enter First Name" name="fname" required>
+
+                        <label for="lname"><b>Last Name</b></label>
+                        <input id="lname" type="text" placeholder="Enter Last Name" name="lname" required>
+
+                        <label for="uname"><b>Username</b></label>
+                        <input id="uname" type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button type="submit">Signup</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <img src="images/2tato_bag.jpg" alt="bag of 2tatoes">
+        <p>The 2tato is the brainchild of Brandon Van Blarcum. Brandon has been a potato enthusiast for over 20 years,
+            and has been working on the 2tato for the last 2 months. Brandon has been working with a team of potato
+            experts to create the perfect and diverse potato for any occasion. He developed the patent pending process
+            that allows to combine certain flavors into a single potato.</p>
+        
+        <h1>FAQs</h1>
+        <p>Here are some of the most frequently asked questions about the 2tato.</p>
+        <img src="images/2tato_cater.jpg" alt="bag of 2tatoes">
+        <ul>
+            <li>How long does it take to make a 2tato?</li>
+            <li>How much does a 2tato cost?</li>
+            <li>How many flavors can I combine?</li>
+            <li>How many 2tatoes can I buy?</li>
+            <li>How long does a 2tato last?</li>
+            <li>How do I store a 2tato?</li>
+            <li>How do I cook a 2tato?</li>
+            <li>How do I eat a 2tato?</li>
+            <li>How do I clean up after eating a 2tato?</li>
+            <li>How do I dispose of a 2tato?</li>
+        </ul>
+
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <img src="/wdd130/wwr/styles/images/facebook.png" alt="fb icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="/wdd130/wwr/styles/images/twitter.png" alt="twitter icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="/wdd130/wwr/styles/images/instagram.png" alt="instagram icon">
+            </a>
+        </div>
+        <p>2tato inc. &copy; 2023 - Brandon Van Blarcum</p>
+        <div class="footer-links">
+            <a href="site-plan.html">Site Plan</a>
+            <a href="terms.html">Terms</a>
+            <a href="pricing.html">Pricing</a>
+        </div>
+
+    </footer>
+
+    <script>
+        // Get the modals
+        var modal_login = document.getElementById('id01');
+        var modal_signup = document.getElementById('id02');
+
+        // When the user clicks anywhere outside of the modals, close it
+        window.onclick = function (event) {
+            if (event.target == modal_login) {
+                modal_login.style.display = "none";
+            }
+            if (event.target == modal_signup) {
+                modal_signup.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
