@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2tato | Flavors</title>
+    <title>2tato | About Us</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -84,28 +84,64 @@
     </header>
 
     <main>
-        <img src="images/2tato_bag.jpg" alt="bag of 2tatoes">
-        <p>The 2tato is the brainchild of Brandon Van Blarcum. Brandon has been a potato enthusiast for over 20 years,
-            and has been working on the 2tato for the last 2 months. Brandon has been working with a team of potato
-            experts to create the perfect and diverse potato for any occasion. He developed the patent pending process
-            that allows to combine certain flavors into a single potato.</p>
-        
-        <h1>FAQs</h1>
-        <p>Here are some of the most frequently asked questions about the 2tato.</p>
-        <img src="images/2tato_cater.jpg" alt="bag of 2tatoes">
-        <ul>
-            <li>How long does it take to make a 2tato?</li>
-            <li>How much does a 2tato cost?</li>
-            <li>How many flavors can I combine?</li>
-            <li>How many 2tatoes can I buy?</li>
-            <li>How long does a 2tato last?</li>
-            <li>How do I store a 2tato?</li>
-            <li>How do I cook a 2tato?</li>
-            <li>How do I eat a 2tato?</li>
-            <li>How do I clean up after eating a 2tato?</li>
-            <li>How do I dispose of a 2tato?</li>
-        </ul>
+        <div class="about-us-content">
+            <!-- <img src="images/2tato_bag.jpg" alt="bag of 2tatoes"> -->
+            <div class="about-us-top-grid">
+                <img src="images/brandon.jpg" alt="logo">
+                <p>The 2tato is the brainchild of Brandon Van Blarcum. Brandon has been a potato enthusiast for over 20
+                    years,
+                    and has been working on the 2tato for the last 2 months. Brandon has been working with a team of
+                    potato
+                    experts to create the perfect and diverse potato for any occasion. He developed the patent pending
+                    process
+                    that allows to combine certain flavors into a single potato.</p>
+            </div>
+            <div class="about-us-title-grid">
+                <h1>FAQs</h1>
+                <img src="images/2tato_bag.jpg" alt="bag of 2tatoes">
+            </div>
 
+            <div class="about-us-main-grid">
+                <ul>
+                    <li>
+                        <button class="collapsible">What is a 2tato?</button>
+                        <div class="content">
+                            <p>The 2tato is the next level of potato technology. It's the same great taste you know and 
+                                love, but now with twice the potato and twice the flavor!</p>
+                    </li>
+                    <li>
+                        <button class="collapsible">What flavors can the 2tatoes come in?</button>
+                        <div class="content">
+                            <p>Check out our flavors page <a href="flavors.html">here</a>!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="collapsible">How do I cook a 2tato?</button>
+                        <div class="content">
+                            <p>You can cook a 2tato the same way you cook a regular potato. You can bake it, fry it, 
+                                boil it, or even microwave it!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="collapsible">How do I store a 2tato?</button>
+                        <div class="content">
+                            <p>You can store a 2tato the same way you store a regular potato. You can store it in a
+                                cool, dry place. It is refrigerator safe.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="collapsible">How many 2tatoes can I order and how much do they cost?</button>
+                        <div class="content">
+                            <p>You can order as many 2tatoes as you want! They can come in a variety of sizes, and the 
+                                price depends on the size and flavor of the 2tato. Check out our pricing page 
+                                <a href="pricing.html">here</a>!</p>
+                        </div>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -142,6 +178,22 @@
             if (event.target == modal_signup) {
                 modal_signup.style.display = "none";
             }
+        }
+    </script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
         }
     </script>
 </body>
